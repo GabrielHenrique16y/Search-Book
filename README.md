@@ -49,7 +49,7 @@ O site está disponível no link abaixo:
 
 2. Entre na pasta do projeto:
    ```sh
-   cd nome-do-projeto
+   cd Search-Book
    ```
 
 3. Instale as dependências:

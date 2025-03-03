@@ -75,6 +75,6 @@ O site está disponível no link abaixo:
 
 ## 🙋‍♂️ Autor
 
-Feito por **Gabriel Henrique**.  
+Feito por **Gabriel Henrique Jenuino**.  
 Este site foi criado como um projeto de estudo e pode ser utilizado como referência para futuras implementações.
 

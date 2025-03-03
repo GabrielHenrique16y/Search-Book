@@ -23,6 +23,12 @@ export const InputControll = styled.div`
     }
 `;
 
+export const TextNotFound = styled.p`
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+`
+
 export const BookSection = styled.section`
     width: 100%;
     background-color: ${Colors.secondaryColor};

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 
 import { Container } from '../../styles/GlobalStyles';
-import { BookSection, InputControll } from './styled';
+import { BookSection, InputControll, TextNotFound } from './styled';
 import axios from '../../services/axios';
 
 export default function Home() {
@@ -21,9 +21,9 @@ export default function Home() {
         } catch {}
     }
 
-    function RedirectBtn(book){
-        const id = book.id
-        navigate(`book/${id}`)
+    function RedirectBtn(book) {
+        const id = book.id;
+        navigate(`book/${id}`);
     }
 
     return (
@@ -36,8 +36,10 @@ export default function Home() {
                 />
                 <button onClick={searchBooks}>Search</button>
             </InputControll>
+            {books.length === 0 && (
+                <TextNotFound>Nenhum livro encontrado.</TextNotFound>
+            )}
             <BookSection>
-                {books.length === 0 && <p>Nenhum livro encontrado.</p>}
                 {books.map((livro) => (
                     <div className="bookCard">
                         {livro.volumeInfo.imageLinks?.thumbnail && (
@@ -71,7 +73,12 @@ export default function Home() {
                             </span>
                             <br />
 
-                            <button className='more-btn' onClick={() => RedirectBtn(livro)}>More</button>
+                            <button
+                                className="more-btn"
+                                onClick={() => RedirectBtn(livro)}
+                            >
+                                More
+                            </button>
                         </div>
                     </div>
                 ))}

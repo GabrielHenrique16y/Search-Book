@@ -64,7 +64,7 @@ export default createGlobalStyle`
 `;
 
 export const Container = styled.section`
-    width: calc(100% - 88px);
+    width: 100%;
     background-color: ${Colors.secondaryColor};
     height: 100%;
     border-radius: 10px;

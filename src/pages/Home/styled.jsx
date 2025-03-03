@@ -33,17 +33,24 @@ export const BookSection = styled.section`
     width: 100%;
     background-color: ${Colors.secondaryColor};
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     margin: 5% ;
-    padding-bottom: 10%;
+    padding: 0 10px 10% 10px;
 
-    .bookCard{
+    .bookCard {
         background-color: #fff;
-        padding: 10px;
+        padding: 15px;
         display: flex;
-        align-items: start;
-        justify-content: start;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.02);
+        }
     }
 
     .bookCard img{
@@ -67,5 +74,12 @@ export const BookSection = styled.section`
         border-radius: 4px;
         font-weight: 400;
         margin-top: 20px;
+
+        &:hover {
+            background: darken(${Colors.primaryColor}, 10%);
+        }
     }
+
 `;
+
+
